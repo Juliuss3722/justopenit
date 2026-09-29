@@ -22,7 +22,7 @@ C:\Projects\my-app              C:\Projects\my-app\src
 └── package.json     Here"             └── ...
 ```
 
-<!-- TODO: add a screenshot or GIF here (relative image paths need "repository" set in package.json). -->
+<!-- TODO: add a screenshot or GIF here, e.g. ![Open Folder Here](images/demo.gif) -->
 
 Details:
 
