@@ -2,18 +2,21 @@
 
 > Because `cd` is apparently too much work.
 
-JustOpenIt adds one thing to VS Code: an **Open Folder Here** entry in the Explorer's right-click menu. Click it, and that folder becomes your workspace root, in the same window.
+JustOpenIt adds two entries to the Explorer's right-click menu:
 
-That's the whole extension.
+- **Open Folder Here** makes that folder your workspace root.
+- **Open Parent Folder Here** makes the folder *above* it your workspace root.
+
+Both work in the same window. That's the whole extension.
 
 ## Why
 
-You opened `my-app`, but you actually want to work in `my-app/packages/api`. Normally that means *File → Open Folder…*, clicking through a file dialog to find a folder that was already in front of you, and confirming. Now it's a single right-click.
+You opened `my-app`, but you actually want to work in `my-app/packages/api`. Or you opened `api` and need the whole monorepo after all. Normally that means *File → Open Folder…*, clicking through a file dialog to find a folder that was already in front of you, and confirming. Now it's a single right-click.
 
 ## Usage
 
 1. Right-click any folder in the Explorer.
-2. Choose **Open Folder Here**.
+2. Choose **Open Folder Here**, or **Open Parent Folder Here** to go one level up.
 
 ```
 C:\Projects\my-app              C:\Projects\my-app\src
@@ -26,7 +29,8 @@ C:\Projects\my-app              C:\Projects\my-app\src
 
 Details:
 
-- The entry only appears on folders, never on files.
+- The entries only appear on folders, never on files.
+- Right-click the workspace root and choose **Open Parent Folder Here** to climb out of it. At a drive root like `C:\` there's nowhere left to go, so nothing happens.
 - The folder opens in the **current window**, as a normal single-folder workspace. VS Code handles unsaved files the way it does for *File → Open Folder…*.
 - In a multi-root workspace, the window switches to just the chosen folder. Your `.code-workspace` file is never modified.
 - Use *File → Open Recent* (or <kbd>Ctrl</kbd>+<kbd>R</kbd>) to jump back.
@@ -58,7 +62,7 @@ npm run package    # creates justopenitalready-<version>.vsix
 Install the result with *Extensions → … → Install from VSIX…*, or:
 
 ```sh
-code --install-extension justopenitalready-0.0.2.vsix
+code --install-extension justopenitalready-0.0.3.vsix
 ```
 
 Publishing to the Marketplace (`npx vsce publish`) is deliberately left as a manual step.

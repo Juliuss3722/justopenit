@@ -1,8 +1,8 @@
 {
   "name": "justopenitalready",
   "displayName": "JustOpenIt!",
-  "description": "Adds “Open Folder Here” to the Explorer context menu. Because cd is apparently too much work.",
-  "version": "0.0.2",
+  "description": "Adds “Open Folder Here” and “Open Parent Folder Here” to the Explorer context menu. Because cd is apparently too much work.",
+  "version": "0.0.3",
   "publisher": "Julius3722",
   "license": "MIT",
   "repository": {
@@ -38,6 +38,10 @@
       {
         "command": "justopenit.openHere",
         "title": "Open Folder Here"
+      },
+      {
+        "command": "justopenit.openParentHere",
+        "title": "Open Parent Folder Here"
       }
     ],
     "menus": {
@@ -45,11 +49,19 @@
         {
           "command": "justopenit.openHere",
           "when": "explorerResourceIsFolder"
+        },
+        {
+          "command": "justopenit.openParentHere",
+          "when": "explorerResourceIsFolder"
         }
       ],
       "commandPalette": [
         {
           "command": "justopenit.openHere",
+          "when": "false"
+        },
+        {
+          "command": "justopenit.openParentHere",
           "when": "false"
         }
       ]

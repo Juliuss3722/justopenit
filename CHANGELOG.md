@@ -4,6 +4,10 @@ All notable changes to the "justopenitalready" extension will be documented in t
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.3]
+
+- New: **Open Parent Folder Here** in the Explorer context menu for folders.
+
 ## [0.0.2]
 
 - Add links to the GitHub repository and issue tracker.
