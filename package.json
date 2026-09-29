@@ -1,0 +1,76 @@
+{
+  "name": "justopenitalready",
+  "displayName": "JustOpenIt!",
+  "description": "Adds “Open Folder Here” to the Explorer context menu. Because cd is apparently too much work.",
+  "version": "0.0.1",
+  "publisher": "Julius3722",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#0f1320",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.138.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "open folder",
+    "explorer",
+    "context menu",
+    "workspace",
+    "folder"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "justopenit.openHere",
+        "title": "Open Folder Here"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "justopenit.openHere",
+          "when": "explorerResourceIsFolder"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "justopenit.openHere",
+          "when": "false"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.138.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "@vscode/vsce": "^4.0.0",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  },
+  "allowScripts": {
+    "@vscode/vsce-sign@2.1.0": true
+  }
+}
