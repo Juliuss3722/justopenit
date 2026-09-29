@@ -58,7 +58,7 @@ npm run package    # creates justopenitalready-<version>.vsix
 Install the result with *Extensions → … → Install from VSIX…*, or:
 
 ```sh
-code --install-extension justopenitalready-0.0.1.vsix
+code --install-extension justopenitalready-0.0.2.vsix
 ```
 
 Publishing to the Marketplace (`npx vsce publish`) is deliberately left as a manual step.
