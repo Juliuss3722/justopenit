@@ -65,5 +65,4 @@ Publishing to the Marketplace (`npx vsce publish`) is deliberately left as a man
 
 ## License
 
-<!-- TODO: choose a license, add a LICENSE file, and set "license" in package.json. -->
-TBD
+[MIT](LICENSE)

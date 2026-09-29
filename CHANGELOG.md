@@ -7,6 +7,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.0.2]
 
 - Add links to the GitHub repository and issue tracker.
+- License under MIT.
 
 ## [0.0.1]
 
