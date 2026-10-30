@@ -1,4 +1,4 @@
-# JustOpenIt
+# [JustOpenIt](https://marketplace.visualstudio.com/items?itemName=Julius3722.justopenitalready)
 
 > Because `cd` is apparently too much work.
 
